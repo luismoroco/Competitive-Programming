@@ -15,13 +15,15 @@ int main()
         {
             int sum = 0;
             vector<int> vec;
-            
-            for (int k = a; k <= b; k++){
+
+            for (int k = a; k <= b; k++)
+            {
                 vec.push_back(array[k]);
                 sum += array[k];
             }
-            
-            if (sum % k == 0){
+
+            if (sum % k == 0)
+            {
                 for (auto i : vec)
                     cout << i << ' ';
 
