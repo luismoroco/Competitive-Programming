@@ -6,7 +6,6 @@ int main()
     int array[] = {1, 2, 3};
     int n = 3, x = 3;
 
-    /*
     int a, b, cont = 0;
     for (a = 0; a < n; a++)
     {
@@ -20,6 +19,7 @@ int main()
     }
     cout << cont << '\n';
 
+    /*
     ------------------------------------------------
     
     class Solution {
@@ -43,14 +43,6 @@ int main()
     };
 
     */
-
-    int sum = 0, cont = 0;
-    for (int k = 0; k < n; k++)
-    {
-        sum += array[k];
-        if(sum == x) ++cont;
-    }
-    cout << cont << '\n';
 
     return EXIT_SUCCESS;
 }
