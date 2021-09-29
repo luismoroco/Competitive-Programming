@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Suma de prefijos 
+
+/*
+    4 
+    1 5 3 9 
+*/
+
 int main()
 {
     ios_base::sync_with_stdio(false);

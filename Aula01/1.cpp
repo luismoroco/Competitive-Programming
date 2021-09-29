@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+* El objetivo es encontrar el mayor número que se pueda obtener
+* multiplicando dos números de esta secuencia. 
+*
+* 10
+* 8 1 6 3 4 10 3 9 14 2 
+*/
+
 int main()
 {
     vector<int> mtx;

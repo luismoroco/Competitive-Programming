@@ -15,7 +15,7 @@ int main()
 
     wchar.sort();
     w1char.sort();
-
+    
     if (wchar == w1char)
         std::cout << "Sí";
 

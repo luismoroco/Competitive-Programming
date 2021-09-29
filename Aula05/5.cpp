@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+* output esperado = sum[4, 1, 5] = 10   
+*/
+
 int main()
 {
     int array[] = {2, 3, 4, 1, 5};

@@ -20,10 +20,7 @@ int find(vector<int> &mtx)
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    vector<int> mtx = {1, 2, 3, 5, 7};
+    vector<int> mtx = {2, 3, -1, 8, 4};
     cout << find(mtx) << '\n';
 
     return EXIT_SUCCESS;

@@ -1,6 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+* output esperado = [3, 3, 5, 5, 6, 7] 
+*/
+
 int main()
 {
     int array[] = {1, 3, -1, -3, 5, 3, 6, 7};
@@ -16,7 +20,7 @@ int main()
         ++ptr1; ++ptr2;
     }
     
-    for (auto v : nx) cout << v << ' ';
+    for (auto &v : nx) cout << v << ' ';
 
     return EXIT_SUCCESS;
 }
