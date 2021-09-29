@@ -3,38 +3,26 @@ using namespace std;
 
 int main()
 {
-    /*
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    
     int n, x, target, i, left, rigth, tmp;
+    bool flag = false;
     vector<int> array;
     cin >> n >> target;
-    while (n--)
-    {
+
+    while (n--){
         cin >> x;
         array.push_back(x);
     }
-    */
 
-    int array[] = {3, 15, 4, 9, 1};
-    int n = 5, i, left, rigth, tmp, target = 5;
-    bool flag = false;
-
-    /*
-    * output esperado : [2, 4] -> sum[4, 1] = 5 
-    */
-
-    for ( i = 0; i < n; ++i)
+    for ( i = 1; i <= array.size(); ++i)
     {
         left = i;
-        rigth = n - 1;
-        while (left < rigth && array[left] && array[rigth]) // 1
+        rigth = array.size()-1;
+        while (left < rigth && array[left] && array[rigth]) 
         {
             tmp = array[left] + array[rigth];
             if (tmp == target)
             {
-                cout << " solve : " << '[' << left << ',' << rigth << ']' << '\n';
+                cout << left << ' ' << rigth << '\n';
                 flag = true;
                 exit(1);
             }
