@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    /*
     int n, x, target, i, left, rigth, tmp;
     vector<int> array;
     cin >> n >> target;
@@ -11,29 +12,39 @@ int main()
         cin >> x;
         array.push_back(x);
     }
+    */
 
-    for (i = 0; i < n; i++)
+    int array[] = {3, 15, 4, 9, 1};
+    int n = 5, i, left, rigth, tmp, target = 5;
+    bool flag = false;
+
+    /*
+    * output esperado : [2, 4] -> sum[4, 1] = 5 
+    */
+
+    for ( i = 0; i < n; ++i)
     {
-        left = i + 1;
+        left = i;
         rigth = n - 1;
-        while (1)
+        while (left < rigth && array[left] && array[rigth]) // 1
         {
             tmp = array[left] + array[rigth];
             if (tmp == target)
             {
-                cout << '[' << left << ',' << rigth << ']' << '\n';
-                left++;
-                rigth--;
-                break;
+                cout << " solve : " << '[' << left << ',' << rigth << ']' << '\n';
+                flag = true;
+                exit(1);
             }
             else if (tmp < target)
                 left++;
             else
                 rigth--;
         }
-
-        cout << "IMPOSSIBLE" << '\n';
     }
+    
+    if (flag == false) 
+        cout << "IMPOSSIBLE" << '\n';
+
 
     return EXIT_SUCCESS;
 }
