@@ -3,9 +3,6 @@ using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
     int array[] = {2, 3, 6, 1, 8, 9};
     int n = 6, k = 5, ans = 0;
 
