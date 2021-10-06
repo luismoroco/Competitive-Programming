@@ -27,46 +27,5 @@ int main(){
         }
     }
 
-
-    
-    /*
-    for (i = 0; i < n; i++)
-    {
-        left = i;
-        rigthh = n - 1;
-        while (left < rigthh)
-        {
-            tmp = array[i] + array[left] + array[rigthh];
-            if (tmp == target)
-            {
-                cout << '[' << array[i] << ',' << array[left] << ',' << array[rigthh] << ']' << '\n';
-                left++;
-                rigthh--;
-            }
-            else if (tmp < target)
-                left++;
-            else
-                rigthh--;
-        }
-    }
-    */
-
     return EXIT_SUCCESS; 
 }
-
-/*
-    int array[] = {1, 3, -1, -3, 5, 3, 6, 7};
-    int n = 8, ptr1, ptr2, i = 0, x, k = 3;
-    vector<int> nx;
-
-    ptr1 = i + 1;
-    ptr2 = i + 2;
-
-    for (;i != n - 2; ++i){
-        x = max(array[i], max(array[ptr1], array[ptr2]));
-        nx.push_back(x);
-        ++ptr1; ++ptr2;
-    }
-    for (auto &v : nx) cout << v << ' ';
-    
-*/
