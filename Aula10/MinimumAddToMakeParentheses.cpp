@@ -15,6 +15,7 @@ int minAddToMakeValid(string s) {
     return l + r;
 }
 
+
 int main(){
     string s = "()))((";
     cout << minAddToMakeValid(s) << '\n';

@@ -54,7 +54,6 @@ void solve(string x, string v){
 
 
 int main(){
-    
     int n, t;
     cin >> n;
     string x, v;
@@ -75,11 +74,5 @@ int main(){
         }
     }
     
-  
-   /*
-   string x = "RRD";
-   string y = "[1,1,2,3,5,8]";
-   solve(x, y);
-    */
    return EXIT_SUCCESS;
 }
