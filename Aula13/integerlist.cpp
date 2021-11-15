@@ -38,7 +38,6 @@ void solve(string x, string v){
                 temp.pop_front();
             }
             res.push_back(t);
-            //for (auto x : t){cout << x << ',';}
             return;
         }else if (flag == false){
             while (!temp.empty()){
@@ -46,7 +45,6 @@ void solve(string x, string v){
                 temp.pop_back();
             }
             res.push_back(t);
-            //for (auto x : t){cout << x << ',';}
             return;
         }
     }

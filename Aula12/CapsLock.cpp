@@ -1,31 +1,33 @@
-#include<deque>
-#include<vector>
-#include<string>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-void solve(string &x){
-    deque<char> tmp;
-    char d;
-    for (size_t i(0); i < x.length(); ++i){
-        d = x[i];
-        if(d=='$'){
-            
-        }
-        else if(d=='@'){
+int main()
+{
+    string s;
+    char u;
+    bool c = true;
+    cin >> s;
 
-        }
-        else{
-            tmp.push_back(d);
+    for(int i = 1; i < s.length(); i++)
+    {
+        if(islower(s[i]))
+        {
+            c = false;
         }
     }
-    
-}
 
-
-int main(){
-    string word = "abc$d@ef$@g$";
-    solve(word);
-
+    if(c == true)
+    {
+        for(int j = 0; j < s.length(); j++)
+        {
+            if(islower(s[j]))
+                u = toupper(s[j]);
+            else
+                u = tolower(s[j]);
+            cout << u;
+        }
+    }
+    else
+        cout << s;
     return 0;
 }
