@@ -7,9 +7,10 @@ typedef int long long ll;
 typedef vector<ll> vl;
 typedef vector<vector<ll>> vll;
 typedef map<ll, bool> mpb;
+typedef vector<bool> vb;
 
 void 
-DFS(vll adj, mpb visited, vl a, ll x)
+DFS(vll &adj, mpb &visited, vl &a, ll x)
 {
     visited[x] = true;
     for (ll i : adj[x]){
@@ -19,7 +20,7 @@ DFS(vll adj, mpb visited, vl a, ll x)
 }
 
 void
-Fx(vl b, vll reinos, ll x, ll y)
+Fx(vl &b, vll &reinos, ll x, ll y)
 {
     b[x] = y;
     for (ll i : reinos[x]){
@@ -28,7 +29,7 @@ Fx(vl b, vll reinos, ll x, ll y)
 }
 
 void 
-solve(ll n, mpb visited, vl a, vl b, vl c, vll adj, vll reinos)
+solve(ll n, mpb &visited, vl &a, vl &b, vl &c, vll &adj, vll &reinos)
 {
     for (ll i = 0; i < n; ++i){
         if (!visited[i]) DFS(adj, visited, a, i);
@@ -36,7 +37,7 @@ solve(ll n, mpb visited, vl a, vl b, vl c, vll adj, vll reinos)
     reverse(begin(a), end(a));
     for (ll i : a){
         if (b[i] == -1){
-            Fx(b, reinos, b[i], b[i]);
+            Fx(b, reinos, i, i);
             c.push_back(i);
         }
     }
@@ -50,8 +51,8 @@ main(int argc, char const *argv[])
 
     vll adj, reinos;
     vl a, b = vl(n, -1), c;
-    adj.resize(n), reinos.resize(n);
     mpb visited;
+    adj.resize(n), reinos.resize(n);
 
     while (m--){
         cin >> x >> y;
