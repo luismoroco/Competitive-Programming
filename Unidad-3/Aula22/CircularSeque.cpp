@@ -3,9 +3,18 @@ using namespace std;
 
 // https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=16&page=show_problem&problem=4459
 
-int main(int argc, char const *argv[])
+typedef int long long ll;
+
+int 
+main(int argc, char const *argv[])
 {
-    int t, i, j, k, x, y, tmp, pos; 
+	/*
+	std::ofstream out("out.txt"); 
+	std::streambuf *coutbuf = std::cout.rdbuf();
+	std::cout.rdbuf(out.rdbuf());
+	*/
+
+    ll t, i, j, k, x, y, tmp, pos; 
     cin >> t;
     string s;
     while (t--){
@@ -16,8 +25,7 @@ int main(int argc, char const *argv[])
 			y = j + k;
 			if(x >= s.length())	x -= s.length();
 			if(y >= s.length())	y -= s.length();
-			if(s[x] == s[y]) {
-				k++;
+			if(s[x] == s[y]) {k++;
 			} else if(s[x] > s[y]) {
 				pos = j+1 > pos+k+1 ? j+1 : pos+k+1;
 				k = 0;
@@ -27,11 +35,10 @@ int main(int argc, char const *argv[])
 				k = 0;
 			}
 		}
-		for	(int i = pos; s[i]; i++)
-			putchar(s[i]);
-		for	(int i = 0; i < pos; i++)
-			putchar(s[i]);
-		puts("");
+
+		for	(ll i = pos; s[i]; i++) cout << s[i];
+		for	(ll i = 0; i < pos; i++) cout << s[i];
+		cout << '\n';
 	}
 
     return 0;
