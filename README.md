@@ -1,2 +1,3 @@
 # ProgrCompetitiva
-Código de programación competitiva 
+
+Código de programación competitiva
