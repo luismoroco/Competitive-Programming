@@ -29,7 +29,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode * NewList = new ListNode(fin[0]);
     for (int i = 1; i < fin.length(); ++i){
         ListNode *tmp = new ListNode(fin[i]);
-        NewList->next = tmp2;
+        NewList->next = tmp;
     }
     return NewList;    
 }
