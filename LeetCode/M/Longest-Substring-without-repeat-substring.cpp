@@ -10,7 +10,6 @@ int lengthOfLongestSubstring(string s) {
     unordered_map<char, int> mp;
     int maxL = 0, i = 1, j = 2;
 
-        
 }
 
 int main(int argc, char const *argv[])

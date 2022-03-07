@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 
 void Fx(vector<vector<int>> &image, int i, int j, int newColor, int origin) {
