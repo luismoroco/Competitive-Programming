@@ -1,24 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <set>
-#include <map>
-#include <cstring>
-#include <string>
-#include <cmath>
-#include <cassert>
-#include <ctime>
-#include <algorithm>
-#include <sstream>
-#include <list>
-#include <queue>
-#include <deque>
-#include <stack>
-#include <cstdlib>
-#include <cstdio>
-#include <iterator>
-#include <functional>
-#include <bitset>
+#include <bits/stdc++.h>
 
 using namespace std;
 
