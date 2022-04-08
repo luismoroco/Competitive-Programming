@@ -16,6 +16,5 @@ int main(int, char**) {
     while (t--) {
         cout << "Case #" << i++ << ": "; solve();
     }
-
     return 0;
 }

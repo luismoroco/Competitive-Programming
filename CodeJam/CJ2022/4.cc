@@ -21,15 +21,18 @@
 
 using namespace std;
 
+#define MAX_DIGITS 10000
+
 long sum = 0, Local = 0;
 long response = 0;
 
 const int N = 100000000 + 1;
-int n;
+int n, tam;
 
 long feli[N];
 int edge[N];
 bool pure[N], visited[N];
+char cases[MAX_DIGITS + sizeof(char)];
 
 void dfs(int s, vector<int> adj[]) {
     if (visited[s]) return;
@@ -41,25 +44,33 @@ void dfs(int s, vector<int> adj[]) {
 }
 
 vector<int> resi;
-void process(int x, vector<int> adj[]) {
-    Local = sum;
-    for (int i = 0; i < resi.size(); ++i) {
-        sum = 0;
-        if (resi[i] == x) {
-            continue;
-        } else {
-            dfs(resi[i], adj);
+void processing(int r, int k, int idx, int used, long arran, vector<int> adj[]) {
+    if (idx == k) {
+        Local = sum;
+        sprintf(cases, "%ld", arran);
+        tam = strlen(cases);
+        for (int i = 0; i < tam; ++i) {
+            sum = 0;
+            int index = cases[i] - '0';
+            dfs(resi[index-1], adj);
             Local += sum;
         }
+        response = max(response, Local);
+        for (int k = 0; k <= n; ++k) {
+            visited[k] = false;
+        } 
+        cases[MAX_DIGITS + sizeof(char)];
+        return;
     }
-    response = max(response, Local);
-    for (int k = 0; k <= n; ++k) {
-        visited[k] = false;
-    } 
+    sum = 0;
+    for (int i = 0; i < r; ++i) {
+        if (0 == (used & (1 << i))) {
+            processing(r, k, idx + 1, used | (1 << i), arran * 10 + (i + 1), adj);
+        }
+    }
 }
 
 void solve() {
-    cout << "GAA\n";
     cin >> n;
     int i, j, k;
     vector<int> adj[n+1];
@@ -78,11 +89,9 @@ void solve() {
     for (i = 1; i <= n; ++i) {
         if (pure[i]) resi.push_back(i);
     }
-    for (int i = 0; i < resi.size(); ++i) {
-        dfs(resi[i], adj);
-        process(resi[i], adj);
-        sum = 0;
-    }
+
+    int x = resi.size();
+    processing(x, x, 0, 0, 0, adj);
     cout << response << '\n';
     response = 0;
     resi.resize(0);
