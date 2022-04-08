@@ -1,20 +1,18 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
 
-const int N = 1000000 + 5;
+uint64_t function() {
 
-void solve() {
-    
+	return 0;
 }
 
 int main(int, char**) {
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-    int t;
-    cin >> t;
-    int i = 1;
-    while (t--) {
-        cout << "Case #" << i++ << ": "; solve();
-    }
-    return 0;
+  ios_base::sync_with_stdio(false); cin.tie(nullptr);
+  int T;
+  cin >> T;
+  for (int i = 1; i <= T; ++i) {
+    printf("Case #%d: %lld\n", i, function()); 
+  }
+
+  return 0;
 }

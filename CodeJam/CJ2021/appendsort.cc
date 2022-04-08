@@ -3,7 +3,7 @@
 int main(int, char**) {
   using namespace std;
   ios_base::sync_with_stdio(false); cin.tie(nullptr);
-
+  
   int T;
   cin >> T;
   for (int i = 1; i <= T; ++i) {
@@ -13,38 +13,63 @@ int main(int, char**) {
     for (string& iter : arr) {
       cin >> iter;
     }
+
+    auto searchBest = [](int x, string str) -> string {
+      while (true) {
+        for (int i = 0; i <= 9; ++i) {
+          str.push_back(i+'0');
+          if (x < stoll(str)) {
+            return str;
+          }
+          str.pop_back();
+        }
+        str += '0';
+      }
+    };
     
     int64_t ans = 0, iter = arr[0].size(), a, b;
-    for (int i = 1; i < N; ++i) {
-      a = arr[i-1].size(), b = arr[i].size();
+    for (int i = 0; i < N - 1; ++i) {
+      a = arr[i].size(), b = arr[i+1].size();
       if (a < b) {
         iter = b;
         continue;
-      } 
+      }
       if (a == b) {
-        if (stoi(arr[i-1]) < stoi(arr[i])) {
+        if (stoll(arr[i]) < stoll(arr[i+1])) {
+          iter = b;
           continue;
         } else {
-          arr[i] += '0';
-          iter++, ans++;
+          string state = searchBest(stoll(arr[i]), arr[i+1]);
+          ans += (state.size() - arr[i+1].size());
+          iter = state.size();
+          arr[i+1] = state;
+          continue;
         }
       }
       if (a > b) {
-        int8_t t = a-b+1, it = 0;
-        while(it <= t) {
-          if (stoi(arr[i-1]) < stoi(arr[i])) {
-            ans += it;
-            break;
-          }
-          arr[i] += '0';
-          iter++;
-          it++;
-        }
+        string state = searchBest(stoll(arr[i]), arr[i+1]);
+        ans += (state.size() - arr[i+1].size());
+        iter = state.size();
+        arr[i+1] = state;
+        continue;
       }
     }
     
     printf("Case #%d: %d\n", i, ans);
   }
+
+  auto searchBest = [](int x, string str) -> string {
+    while (true) {
+      for (int i = 0; i <= 9; ++i) {
+        str.push_back(i+'0');
+        if (x < stoll(str)) {
+          return str;
+        }
+        str.pop_back();
+      }
+      str += '0';
+    }
+  };
 
   return 0;
 }
