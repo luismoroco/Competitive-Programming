@@ -1,17 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-uint64_t function() {
+void run() {
 
-	return 0;
 }
 
 int main(int, char**) {
-  ios_base::sync_with_stdio(false); cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
   int T;
   cin >> T;
   for (int i = 1; i <= T; ++i) {
-    printf("Case #%d: %lld\n", i, function()); 
+    cout << "Case #" << i << ": "; run();
   }
 
   return 0;
