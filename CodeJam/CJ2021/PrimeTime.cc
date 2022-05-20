@@ -40,7 +40,7 @@ uint64_t function() {
 int main(int, char**) {
   ios_base::sync_with_stdio(false); cin.tie(nullptr);
   int T;
-  cin >> T;
+  scanf("%d", &T);
   for (int i = 1; i <= T; ++i) {
     printf("Case #%d: %lld\n", i, function()); 
   }

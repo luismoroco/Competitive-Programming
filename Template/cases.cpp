@@ -2,7 +2,7 @@
 using namespace std;
 
 void run() {
-
+  
 }
 
 int main(int, char**) {
@@ -10,7 +10,7 @@ int main(int, char**) {
   cin.tie(nullptr);
 
   int T;
-  cin >> T;
+  scanf("%d", &T);
   for (int i = 1; i <= T; ++i) {
     cout << "Case #" << i << ": "; run();
   }

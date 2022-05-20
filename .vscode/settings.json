@@ -76,5 +76,7 @@
         "variant": "cpp",
         "rope": "cpp",
         "slist": "cpp"
-    }
+    },
+    "editor.tabSize": 2,
+    "editor.stickyTabStops": true
 }

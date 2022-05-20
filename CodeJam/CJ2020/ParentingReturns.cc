@@ -58,28 +58,7 @@ void solve() {
             res[act[i].first] = replace;
         }
     }
-    /*
-    for (int i = 0; i < n; ++i) {
-        cout << res[i];
-    }*/
     cout << res << '\n';
-
-
-
-    /*
-    vector<pair<int, int>> act(n);
-    for (int i = 0; i < n; ++i) {
-        cin >> act[i].first >> act[i].second;
-    }
-    sort(act.begin(), act.end());
-    vector<char> ans(n, 'J');
-    for (int i = 0; i < n - 1; ++i) {
-        if (act[i].second < act[i+1].second) {
-            ans[i] = 'C';
-        }
-    }
-    for (char i : ans) cout << i << ' ';
-    cout << '\n';*/
 }
 
 int main(int, char**) {
